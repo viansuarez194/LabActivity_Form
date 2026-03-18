@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 style="
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background: linear-gradient(135deg, #002535 40%, #004d73 60%);
+    color: rgb(255, 243, 243); 
+    text-align: center; 
+    padding: 20px 0; 
+    margin: 0; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 50px;
+">
+    WELCOME TO THE STUDENTS REGISTRATION SYSTEM
+</h1>
+
+<!-- IMPORTANT: Para hindi matakpan ng fixed header ang content sa ilalim -->
+<div style="padding-top: 80px;">
+    <!-- Dito ilalagay ang main content ng page -->
+</div>
+
+<div class="container">
+<h2 style = "font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">STUDENT REGISTRATION FORM</h2>
+
+<form id="registrationForm">
+
+<!-- First Name -->
+<div class="form-group">
+<label>First Name *</label>
+<input type="text" id="firstName" required>
+<small class="error"></small>
+</div>
+
+<!-- Middle Name -->
+<div class="form-group">
+<label>Middle Name</label>
+<input type="text" id="middleName">
+<small class="error"></small>
+</div>
+
+<!-- Last Name -->
+<div class="form-group">
+<label>Last Name *</label>
+<input type="text" id="lastName" required>
+<small class="error"></small>
+</div>
+
+<!-- Course -->
+<div class="form-group">
+<label>Course *</label>
+<select id="course" required>
+<option value="">Select Course</option>
+<option>BS Computer Science</option>
+<option>BS Information Technology</option>
+<option>BS Information Systems</option>
+<option>BS Business Administration</option>
+<option>BS Office Administration</option>
+<option>BS Criminal Justice</option>
+<option>BS Teacher Education</option>
+<option>BS Hospitality and Tourism Management</option>
+<option>BS Psychology</option>
+<option>BS Engineering</option>
+</select>
+<small class="error"></small>
+</div>
+
+<!-- Password -->
+<div class="form-group">
+<label>Password *</label>
+<input type="password" id="password" required>
+
+<small id="strengthText"></small>
+<div id="strengthBar" style="height:5px; background:red; width:0%;"></div>
+
+<!-- Gender -->
+<div class="radio-group">
+    <label>Gender *</label>
+    <label>
+        <input type="radio" name="gender" value="Male"> Male
+    </label>
+
+    <label>
+        <input type="radio" name="gender" value="Female"> Female
+    </label>
+</div>
+
+<div class="form-group terms-group">
+    <input type="checkbox" id="terms">
+    <label for="terms">I accept Terms & Conditions *</label>
+    <small class="error"></small>
+</div>
+
+<button type="submit">REGISTER</button>
+
+</form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

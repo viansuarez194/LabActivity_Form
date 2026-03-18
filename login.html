@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+    <h2>Login</h2>
+
+    <form id="loginForm">
+        <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" id="loginFirstName" required>
+        </div>
+
+        <div class="form-group">
+            <label>Password *</label>
+            <input type="password" id="loginPassword" required>
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+const form = document.getElementById("loginForm");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("loginFirstName").value;
+    const password = document.getElementById("loginPassword").value;
+
+    const savedUser = JSON.parse(localStorage.getItem("studentAccount"));
+
+    if (savedUser && name === savedUser.firstName && password === savedUser.password) {
+        alert("Login Successful!");
+    } else {
+        alert("Invalid credentials!");
+    }
+});
+</script>
+
+</body>
+</html>
